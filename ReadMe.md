@@ -1,4 +1,7 @@
-
++Observations:
+ +1. While most of the drivers are in urban environments (77.8%), only half the total rides occur in urban environments
+ +2. Urban riders tend to have lower average fares
+ +3. Rural riders have the highest average fares
 
 ```python
 # Dependencies
