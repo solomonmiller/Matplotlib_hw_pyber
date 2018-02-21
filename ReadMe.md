@@ -1,8 +1,4 @@
 
-Observations:
-1. While most of the drivers are in urban environments (77.8%), only half the total rides occur in urban environments
-2. Urban riders tend to have lower average fares
-3. Rural riders have the highest average fares
 
 ```python
 # Dependencies
@@ -392,9 +388,9 @@ Rural_df.head()
 
 ```python
 fig, ax = plt.subplots()
-plt.scatter(Rural_df['ride_id'], Rural_df['fare'], s=Rural_df['driver_count'], c='Gold', alpha=0.7, edgecolor = 'lightgrey', linewidth=2)
-plt.scatter(urban_df['ride_id'], urban_df['fare'], s=urban_df['driver_count'], c='LightCoral', alpha=0.7, edgecolor = 'lightgrey', linewidth=2)
-plt.scatter(suburban_df['ride_id'], suburban_df['fare'], s=suburban_df['driver_count'], c='LightSkyBlue', edgecolor = 'lightgrey', alpha=0.7, linewidth=2)
+plt.scatter(Rural_df['ride_id'], Rural_df['fare'], s=Rural_df['driver_count'], c='Gold', alpha=0.9, edgecolor = 'black', linewidth=.5)
+plt.scatter(urban_df['ride_id'], urban_df['fare'], s=urban_df['driver_count'], c='LightCoral', alpha=0.9, edgecolor = 'black', linewidth=.5)
+plt.scatter(suburban_df['ride_id'], suburban_df['fare'], s=suburban_df['driver_count'], c='LightSkyBlue', edgecolor = 'black', alpha=0.9, linewidth=.5)
 plt.legend()
 
 plt.xlabel("Total Number of Rides (Per City)")
@@ -407,7 +403,7 @@ L=plt.legend()
 L.get_texts()[0].set_text('Rural')
 L.get_texts()[1].set_text('Urban')
 L.get_texts()[2].set_text('Suburban')
-ax.set_axis_bgcolor("ivory")
+ax.set_axis_bgcolor("lightgrey")
 ax.set_clip_on(False)
 plt.savefig('Bubble_chart.png')
 plt.show()
